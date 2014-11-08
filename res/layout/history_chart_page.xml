@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chartview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- TYPE SWITCH -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageTexting"
+                android:layout_width="@dimen/Circle"
+                android:layout_height="@dimen/Circle"
+                android:layout_gravity="center"
+                android:src="@drawable/addiction" />
+
+            <TextView
+                android:id="@+id/app_addiction_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="Addiction"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageTexting"
+                android:layout_width="@dimen/Circle"
+                android:layout_height="@dimen/Circle"
+                android:layout_gravity="center"
+                android:src="@drawable/active_time" />
+
+            <TextView
+                android:id="@+id/app_addiction_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="Active time"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageTexting"
+                android:layout_width="@dimen/Circle"
+                android:layout_height="@dimen/Circle"
+                android:layout_gravity="center"
+                android:src="@drawable/phone_check" />
+
+            <TextView
+                android:id="@+id/app_addiction_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="Checks"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- CHARTS -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+
+<!--         <com.fima.chartview.ChartView -->
+<!--             android:id="@+id/chart_view" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:layout_centerHorizontal="true" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:layout_margin="8dp" -->
+
+<!--             chartview:bottomLabelHeight="20dp" -->
+<!--             chartview:gridLineColor="#E5E5E5" -->
+<!--             chartview:gridLineWidth="1dp" -->
+<!--             chartview:gridLinesHorizontal="5" -->
+<!--             chartview:gridLinesVertical="5" -->
+<!--             chartview:leftLabelWidth="56dp" /> -->
+    </LinearLayout>
+
+    <!-- TIME WINDOWS SELECTOR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24h"
+                android:textSize="13sp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Week"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Month"
+                android:textSize="13sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- CATEGORY SELCTOR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dp"
+        android:gravity="center|bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageTexting"
+            android:layout_width="@dimen/Circle"
+            android:layout_height="@dimen/Circle"
+            android:src="@drawable/texting" />
+
+        <ImageView
+            android:id="@+id/imageSocial"
+            android:layout_width="@dimen/Circle"
+            android:layout_height="@dimen/Circle"
+            android:src="@drawable/social" />
+
+        <ImageView
+            android:id="@+id/imageApps"
+            android:layout_width="@dimen/Circle"
+            android:layout_height="@dimen/Circle"
+            android:src="@drawable/apps" />
+
+        <ImageView
+            android:id="@+id/imageWWW"
+            android:layout_width="@dimen/Circle"
+            android:layout_height="@dimen/Circle"
+            android:src="@drawable/www" />
+
+        <ImageView
+            android:id="@+id/imageGaming"
+            android:layout_width="@dimen/Circle"
+            android:layout_height="@dimen/Circle"
+            android:src="@drawable/game" />
+    </LinearLayout>
+
+</LinearLayout>

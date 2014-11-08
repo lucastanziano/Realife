@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slide="http://schemas.android.com/apk/res/com.tjerkw.slideexpandable.library"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iconApp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/textPName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/RealGray"
+        android:textSize="15sp" 
+        android:layout_toRightOf="@+id/iconApp"/>
+
+    <TextView
+        android:id="@+id/activeTimeAppText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:textColor="@color/RealGray"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:layout_toLeftOf="@+id/expandable_toggle_button"/>
+
+    <ImageView
+        android:id="@+id/expandable_toggle_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dp" 
+        
+   />
+
+
+</RelativeLayout>

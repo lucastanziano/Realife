@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.realapp.realife"
+    android:versionCode="9"
+    android:versionName="1.0.8" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.realapp.realife.ReaLifeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.Sherlock.Light.DarkActionBar"
+        android:hardwareAccelerated="true"
+ >
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.realapp.realife.activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.realapp.realife.service.MonitorService"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.realapp.realife.Monitor" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.realapp.realife.observers.DataEntryObserver" android:enabled="true" >
+            <intent-filter>
+                <action android:name= "com.realapp.custom.intent.action.DBUPDATED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.realapp.realife.observers.AlertsObserver" >
+            <intent-filter>
+                <action android:name="com.realapp.realife.ACTION_ALERT_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.realapp.realife.service.BootCompletedReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+   
+    </application>
+
+</manifest>
